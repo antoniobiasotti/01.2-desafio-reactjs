@@ -2,16 +2,15 @@ import styles from './Todo.module.css';
 
 import * as Icon from "@phosphor-icons/react";
 
-export function Todo(props){
-
-     
+export function Todo({ content }){
+    
      // console.log(content);
 
      return(
           <main>
                <div className={styles.todo}>
                     <input type="radio"></input>
-                    <label>{props.content}</label>
+                    <label>{content}</label>
                     <button title="Deletar todo">
                          <Icon.Trash size={24} />
                     </button>
