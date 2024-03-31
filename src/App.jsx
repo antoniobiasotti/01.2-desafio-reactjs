@@ -8,20 +8,20 @@ import { Todo } from './components/Todo.jsx'
 
 import './global.css'
 
-const [todos, setTodos] = useState([
-  {
-       id: 1,
-       isComplete: false,
-       content: 'Estudar Reactjs' 
-  },
-  {
-        id: 2,
-        isComplete: false,
-        content: 'Estudar Typescript'    
-  }
-]);
-
 export default function App() {
+
+  const [todos, setTodos] = useState([
+    {
+         id: 1,
+         isComplete: false,
+         content: 'Estudar Reactjs' 
+    },
+    {
+          id: 2,
+          isComplete: false,
+          content: 'Estudar Typescript'    
+    }
+  ]);
 
   // const handleAddTodo = 
 
