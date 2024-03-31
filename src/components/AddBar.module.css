@@ -1,0 +1,48 @@
+.addbar {
+     display: flex;
+     align-items: flex-start;
+     justify-content: center;
+     gap: 0.5rem;
+     padding: 1.25rem 0rem;
+     /* background: var(--gray-400) */
+}
+
+.addbar textarea {
+     color: var(--gray-100);
+     background: var(--gray-500);
+      
+     width: 638px;
+     height: 54px;
+
+     border: 0;
+     padding: 1.2rem 1.5rem;
+     border-radius: 8px;
+
+     resize: none;
+     outline: none;
+}
+
+.addbar button {
+     background: var(--blue-dark);
+     color: var(--gray-100);
+
+     width: 90px;
+     height: 52px;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     gap: 0.25rem;
+
+     border: 1px solid transparent;
+     border-radius: 8px;
+
+     cursor: pointer;
+
+     transition: background-color 0.5s;
+}
+
+.addbar button:hover {
+     background: var(--blue);
+}

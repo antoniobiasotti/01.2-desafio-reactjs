@@ -1,0 +1,89 @@
+main {
+     background: var(--gray-500);
+     color: var(--gray-100);
+
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     padding: 1rem 1rem;
+
+     width: 730px;
+
+     margin: 0 auto;
+     margin-top: 2rem;
+}
+
+.todo button {
+     background: transparent;
+     border: 0;
+
+     margin-right: 5rem;
+
+     cursor: pointer;
+     transition: color 0.5s
+}
+
+.todo button:hover {
+     color: var(--danger);
+
+     /* padding: 5px; */
+}
+
+.todo {
+
+    background: var(--gray-500);
+    color: var(--gray-100);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 1rem;
+
+    border: 2px solid var(--gray-300);
+    border-radius: 8px;
+
+    width: 730px;
+    height: 72px;
+ }
+
+ .todo label {
+    display: inline;
+    align-items: center;
+    width: 300px;
+ }
+
+ .todo p {
+     justify-content: justify;
+ }
+
+ .todo input {
+     appearance: none;
+     border-radius: 50%;
+     width: 16px;
+     height: 16px;
+
+     border: 2px solid var(--blue);
+
+     cursor: pointer;
+     transition: background-color 0.5s
+ }
+
+ .todo input:hover{
+     background-color: var(--blue-dark);
+ }
+
+ .todo input[type="radio"]:focus {
+     outline: none;
+     background-color: var(--purple);
+     border: 2px solid var(--purple);
+ }
+
+ .todo input:checked {
+     color: var(--purple);
+ }
+
+ .todo input:checked + label {
+    text-decoration: line-through;
+}
+
