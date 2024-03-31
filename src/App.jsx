@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from './App.module.css'
 
 import { AddBar } from './components/AddBar.jsx'
@@ -7,7 +8,7 @@ import { Todo } from './components/Todo.jsx'
 
 import './global.css'
 
-const todos = [
+const [todos, setTodos] = useState([
   {
        id: 1,
        isComplete: false,
@@ -18,13 +19,16 @@ const todos = [
         isComplete: false,
         content: 'Estudar Typescript'    
   }
-];
+]);
 
 export default function App() {
 
   // const handleAddTodo = 
 
-  // const handleDeleteTodo = 
+  const handleDeleteTodo = (id) => {
+    const updatedTodos = todos.filter(todo => todo.id !== id);
+    setTodos(updatedTodos);
+  };
   
   return (
     <article className={styles.app}>
