@@ -40,6 +40,7 @@ export default function App() {
             <Todo
               key={todo.id} 
               content={todo.content}
+              onDelete={() => handleDeleteTodo(todo.id)}
             />
           )
         })}
