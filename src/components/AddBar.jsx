@@ -3,9 +3,6 @@ import styles from './AddBar.module.css';
 
 export function AddBar(todos) {
 
-     function handleDescribeNewTodo() { 
-     }
-
      function handleCreateNewTodo(event) {
           event.preventDefault()
 
@@ -16,7 +13,7 @@ export function AddBar(todos) {
 
      return(
           <form onSubmit={handleCreateNewTodo} className={styles.addbar}>
-               <textarea onClick={handleDescribeNewTodo}
+               <textarea
                     placeholder='Adicione uma nova tarefa'
                     required
                />
