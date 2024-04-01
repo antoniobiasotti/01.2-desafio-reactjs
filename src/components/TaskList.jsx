@@ -1,12 +1,12 @@
 import * as Icon from "@phosphor-icons/react";
 import styles from './TaskList.module.css';
 
-export function TaskList() {
+export function TaskList({ numberOfTodos }) {
      return(
           <article>
                <header>
                     <div className={styles.tasklist}>
-                         <h4 className={styles.tarefasCriadas}>Tarefas criadas<button>0</button></h4>
+                         <h4 className={styles.tarefasCriadas}>Tarefas criadas<button>{numberOfTodos}</button></h4>
                          <h4 className={styles.tarefasConcluidas}>Concluídas<button>0</button></h4>
                     </div>
                </header>

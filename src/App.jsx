@@ -12,16 +12,19 @@ export default function App() {
 
   const [todos, setTodos] = useState([
     {
-         id: 1,
-         isComplete: false,
-         content: 'Estudar Reactjs' 
+      id: 1,
+      isComplete: false,
+      content: 'Estudar Reactjs' 
     },
     {
-          id: 2,
-          isComplete: false,
-          content: 'Estudar Typescript'    
+      id: 2,
+      isComplete: false,
+      content: 'Estudar Typescript'    
     }
   ]);
+  
+  console.log(Array.isArray(todos))
+  const numberOfTodos = todos.length;
 
   // const handleAddTodo = 
 
@@ -34,7 +37,8 @@ export default function App() {
     <article className={styles.app}>
       <Header />
       <AddBar />
-      <TaskList />
+      <TaskList 
+        numberOfTodos={numberOfTodos}/>
         {todos.map(todo => {
           return (
             <Todo
