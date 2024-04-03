@@ -1,7 +1,10 @@
 import * as Icon from "@phosphor-icons/react";
 import styles from './TaskList.module.css';
 
-export function TaskList({ numberOfTodos, displayDefMsg }) {
+export function TaskList({ numberOfTodos }) {
+
+     const isThereNoTodo = numberOfTodos === 0;
+
      return(
           <article>
                <header>
@@ -10,7 +13,7 @@ export function TaskList({ numberOfTodos, displayDefMsg }) {
                          <h4 className={styles.tarefasConcluidas}>Concluídas<button>0</button></h4>
                     </div>
                </header>
-               <div className={styles.content} display={displayDefMsg}>
+               <div className={styles.content} disabled={isThereNoTodo}>
                     <Icon.ClipboardText size={32} />
                     <h4>Você ainda não tem tarefas cadastradas</h4>
                     <span>Crie tarefas e organize seus itens a fazer</span>
