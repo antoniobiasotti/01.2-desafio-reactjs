@@ -16,7 +16,7 @@ main {
 
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
 
     gap: 1.5rem;
 
@@ -43,6 +43,13 @@ main {
 
  .todo label {
     display: inline;
+ }
+
+ .todo div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
  }
 
  .todo button {

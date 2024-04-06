@@ -9,10 +9,10 @@ export function Todo({ content, onDelete }){
      return(
           <main>
                <div className={styles.todo}>
-                    
+                    <div>
                          <input type="radio"></input>
                          <label>{content}</label>
-                    
+                    </div>
                     <button onClick={onDelete} title="Deletar todo">
                          <Icon.Trash size={24} />
                     </button>

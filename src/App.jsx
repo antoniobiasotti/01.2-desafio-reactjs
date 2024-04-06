@@ -27,7 +27,7 @@ export default function App() {
   const numberOfTodos = todos.length;
   // console.log('Teste:' + numberOfTodos !== 0);
 
-  const [defMsg, setMsgVisibility] = useState(false);
+  const [defMsgVisibility, setMsgVisibility] = useState(false);
 
   const showMsg = (todos) => {
     setMsgVisibility(true)
@@ -46,8 +46,9 @@ export default function App() {
     <article className={styles.app}>
       <Header />
       <AddBar />
-      <TaskList 
-        showMsg={defMsg}
+      <TaskList
+        numberOfTodos={numberOfTodos} 
+        showMsg={defMsgVisibility}
       />
         {todos.map(todo => {
           return (
