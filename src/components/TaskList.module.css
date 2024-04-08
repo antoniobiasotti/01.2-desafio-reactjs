@@ -19,7 +19,7 @@
 .tarefasCriadas {
      color: var(--blue);
      display: flex;
-     align-items: flex-start;
+     align-items: center;
      justify-content: center;
      gap: 0.5rem;
 }
@@ -27,7 +27,7 @@
 .tarefasConcluidas {
      color: var(--purple);
      display: flex;
-     align-items: flex-start;
+     align-items: center;
      justify-content: center;
      gap: 0.5rem;
 }
