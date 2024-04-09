@@ -31,11 +31,7 @@ export default function App() {
   const [defMsgVisibility, setMsgVisibility] = useState(false);
 
   const showMsg = (todos) => {
-    setMsgVisibility(true)
-  };
-
-  const hideMsg = (todos) => {
-    setMsgVisibility(false)
+    todos == 0 ? setMsgVisibility(true) : setMsgVisibility(false)
   };
 
   const handleDeleteTodo = (id) => {
