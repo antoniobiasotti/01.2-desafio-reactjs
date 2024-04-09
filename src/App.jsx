@@ -5,6 +5,7 @@ import { AddBar } from './components/AddBar.jsx'
 import { Header } from './components/Header.jsx'
 import { TaskList } from './components/TaskList.jsx'
 import { Todo } from './components/Todo.jsx'
+import { Footer } from './components/Footer.jsx'
 
 import './global.css'
 
@@ -59,6 +60,7 @@ export default function App() {
             />
           )
         })}
+      <Footer />
     </article>
   )
 }
