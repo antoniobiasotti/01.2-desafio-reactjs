@@ -1,16 +1,14 @@
 main {
-     background: var(--gray-500);
-     color: var(--gray-100);
+    width: 50%;
+    background: var(--gray-500);
+    color: var(--gray-100);
 
-     width: 730px;
-
-     margin: 0 auto;
-     margin-top: 2rem;
-     border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
 }
 
 .todo {
-
     background: var(--gray-500);
     color: var(--gray-100);
 
@@ -22,11 +20,11 @@ main {
 
     padding: 0 1rem;
 
+    width: 75%;
+    height: 72px;
+
     border: 2px solid transparent;
     border-radius: 1rem;
-
-    width: 730px;
-    height: 72px;
  }
 
  .todo input {
