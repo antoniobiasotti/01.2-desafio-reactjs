@@ -1,0 +1,30 @@
+.Footer {
+    font-size: medium;
+    color: var(--blue);
+    background: var(--gray-700);
+
+    display: flex;
+    justify-content: right;
+     
+    padding: 1.25rem 0rem;
+    margin-top: 20px;
+}
+
+.Footer p {
+    margin-right: 10px;
+}
+
+.Footer a {
+
+}
+
+.Footer button {
+    background-color: var(--gray-700);
+    cursor: pointer;
+    padding: 8px;
+
+}
+
+.Footer button:hover {
+
+}
