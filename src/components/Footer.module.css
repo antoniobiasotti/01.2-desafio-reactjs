@@ -5,6 +5,7 @@
 
     display: flex;
     justify-content: right;
+    align-items: center;
      
     padding: 1.25rem 0rem;
     margin-top: 20px;
@@ -12,19 +13,24 @@
 
 .Footer p {
     margin-right: 10px;
-}
-
-.Footer a {
-
+    color: var(--purple);
 }
 
 .Footer button {
     background-color: var(--gray-700);
     cursor: pointer;
     padding: 8px;
-
+    border: none;
 }
 
-.Footer button:hover {
+.Footer a{
+    text-decoration: none;
+}
 
+.Footer a:hover {
+    color: var(--blue);
+}
+
+.Footer a:visited {
+    text-decoration: none;
 }
