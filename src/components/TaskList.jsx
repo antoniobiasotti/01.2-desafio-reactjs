@@ -4,6 +4,7 @@ import styles from './TaskList.module.css';
 export function TaskList({ showMsg, numberOfTodos }) {
 
      console.log(showMsg);
+     console.log(numberOfTodos);
 
      return(
           <article>

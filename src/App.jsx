@@ -24,19 +24,15 @@ export default function App() {
     }
   ]);
   
-  console.log(Array.isArray(todos))
   const numberOfTodos = todos.length;
   // console.log('Teste:' + numberOfTodos !== 0);
 
-  const [defMsgVisibility, setMsgVisibility] = useState(false);
-
-  const showMsg = (todos) => {
-    todos == 0 ? setMsgVisibility(true) : setMsgVisibility(false)
-  };
+  const [MsgVisibility, setMsgVisibility] = useState();
 
   const handleDeleteTodo = (id) => {
     const updatedTodos = todos.filter(todo => todo.id !== id);
     setTodos(updatedTodos);
+    numberOfTodos !== 0 ? setMsgVisibility(true) : setMsgVisibility(false)
   };
   
   return (
@@ -45,7 +41,7 @@ export default function App() {
       <AddBar />
       <TaskList
         numberOfTodos={numberOfTodos} 
-        showMsg={defMsgVisibility}
+        showMsg={MsgVisibility}
       />
         {todos.map(todo => {
           return (
