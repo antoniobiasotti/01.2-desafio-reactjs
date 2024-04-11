@@ -26,8 +26,8 @@ export default function App() {
   
   
   const [MsgVisibility, setMsgVisibility] = useState();
-  
-  const [newTodoContent, setNewTodoContent] = useState('');
+
+  // const [newTodoContent, setNewTodoContent] = useState('');
 
   const numberOfTodos = todos.length;
   // console.log('Teste:' + numberOfTodos !== 0);
@@ -39,16 +39,26 @@ export default function App() {
   };
   
   const handleCreateNewTodo = () => {
-    const updatedTodos = todos.push()
+    const newId = numberOfTodos + 1;
+    const newTodo = {
+      id: newId,
+      isComplete: false,
+      content: 'Nova tarefa'
+    }
+    const updatedTodos = [...todos, newTodo];
     setTodos(updatedTodos);
-    setNewTodoContent('');
   }
+
+  // const handleConcludedTodo = () => {
+
+  // }
 
   return (
     <article className={styles.app}>
       <Header />
       <AddBar 
-        addTodo = {() => handleCreateNewTodo()}
+        newTodoContent = {todos.content}
+        onAddTodo = {handleCreateNewTodo}
       />
       <TaskList
         numberOfTodos={numberOfTodos} 
@@ -60,6 +70,7 @@ export default function App() {
               key={todo.id} 
               content={todo.content}
               onDelete={() => handleDeleteTodo(todo.id)}
+              onConcluded={() => handleConcludedTodo(todo.id)}
             />
           )
         })}

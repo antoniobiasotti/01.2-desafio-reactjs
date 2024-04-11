@@ -1,13 +1,12 @@
 import * as Icon from "@phosphor-icons/react";
 import styles from './AddBar.module.css';
 
-export function AddBar({ addTodo }) {
+export function AddBar({ onAddTodo }) {
 
      return(
-          <form onSubmit={addTodo} className={styles.addbar}>
+          <form onSubmit={onAddTodo} className={styles.addbar}>
                <textarea
                     name="todo"
-                    value={newTodoContent}
                     placeholder='Adicione uma nova tarefa'
                     required
                />
