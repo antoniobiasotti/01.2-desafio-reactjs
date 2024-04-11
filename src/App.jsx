@@ -32,7 +32,7 @@ export default function App() {
   const handleDeleteTodo = (id) => {
     const updatedTodos = todos.filter(todo => todo.id !== id);
     setTodos(updatedTodos);
-    numberOfTodos !== 0 ? setMsgVisibility(true) : setMsgVisibility(false)
+    numberOfTodos > 0 ? setMsgVisibility(true) : setMsgVisibility(false)
   };
   
   return (
