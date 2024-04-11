@@ -24,21 +24,32 @@ export default function App() {
     }
   ]);
   
+  
+  const [MsgVisibility, setMsgVisibility] = useState();
+  
+  const [newTodoContent, setNewTodoContent] = useState('');
+
   const numberOfTodos = todos.length;
   // console.log('Teste:' + numberOfTodos !== 0);
-
-  const [MsgVisibility, setMsgVisibility] = useState();
 
   const handleDeleteTodo = (id) => {
     const updatedTodos = todos.filter(todo => todo.id !== id);
     setTodos(updatedTodos);
-    numberOfTodos > 0 ? setMsgVisibility(true) : setMsgVisibility(false)
+    updatedTodos === 0 ? setMsgVisibility(true) : setMsgVisibility(false)
   };
   
+  const handleCreateNewTodo = () => {
+    const updatedTodos = todos.push()
+    setTodos(updatedTodos);
+    setNewTodoContent('');
+  }
+
   return (
     <article className={styles.app}>
       <Header />
-      <AddBar />
+      <AddBar 
+        addTodo = {() => handleCreateNewTodo()}
+      />
       <TaskList
         numberOfTodos={numberOfTodos} 
         showMsg={MsgVisibility}
