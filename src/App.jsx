@@ -30,6 +30,7 @@ export default function App() {
   // const [newTodoContent, setNewTodoContent] = useState('');
 
   const numberOfTodos = todos.length;
+
   // console.log('Teste:' + numberOfTodos !== 0);
 
   const handleDeleteTodo = (id) => {
@@ -48,6 +49,8 @@ export default function App() {
     const updatedTodos = [...todos, newTodo];
     setTodos(updatedTodos);
   }
+  
+  console.log(todos);
 
   // const handleConcludedTodo = () => {
 
