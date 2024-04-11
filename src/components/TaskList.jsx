@@ -15,7 +15,8 @@ export function TaskList({ showMsg, numberOfTodos }) {
                     </div>
                </header>
                <div className={styles.content}>
-                    {showMsg && <div>
+                    {showMsg && 
+                    <div>
                          <Icon.ClipboardText size={32} />
                          <h4>Você ainda não tem tarefas cadastradas</h4>
                          <span>Crie tarefas e organize seus itens a fazer</span> 

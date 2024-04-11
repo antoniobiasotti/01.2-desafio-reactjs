@@ -32,7 +32,7 @@
      gap: 0.5rem;
 }
 
-.content {
+.content div {
      color: var(--gray-300);
      
      display: flex;
