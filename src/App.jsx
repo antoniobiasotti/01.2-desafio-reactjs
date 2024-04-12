@@ -23,12 +23,12 @@ export default function App() {
       content: 'Estudar Typescript'    
     }
   ]);
+
+  const [completedTodos, setNumberOfCompletedTodos] = useState(0);
   
   const [MsgVisibility, setMsgVisibility] = useState();
-
+  
   const numberOfTodos = todos.length;
-
-  const numberOfConcludedTodos = 0;
   
   const handleDeleteTodo = (id) => {
     const updatedTodos = todos.filter(todo => todo.id !== id);
@@ -36,21 +36,30 @@ export default function App() {
     updatedTodos === 0 ? setMsgVisibility(true) : setMsgVisibility(false)
   };
   
-  const handleCreateNewTodo = () => {
+  const handleCreateNewTodo = (content) => {
     const newId = numberOfTodos + 1;
     const newTodo = {
       id: newId,
       isComplete: false,
-      content: 'Nova tarefa'
+      content: content,
     }
     const updatedTodos = [...todos, newTodo];
     setTodos(updatedTodos);
   }
   
-  const handleChangeStateOfTodo = (id) => {
-    todo.isComplete = true;
-    numberOfConcludedTodos += 1;
-  }
+  const handleChangeStateOfTodo = (todoId) => {
+    const updatedTodos = todos.map(todo => {
+      if (todo.id === todoId) {
+        return { ...todo, isComplete: !todo.isComplete };
+      }
+      return todo;
+    });
+
+    const completedTodosCount = updatedTodos.filter(todo => todo.isComplete).length;
+
+    setNumberOfCompletedTodos(completedTodosCount);
+    setTodos(updatedTodos);
+  };
 
   return (
     <article className={styles.app}>
@@ -60,7 +69,7 @@ export default function App() {
       />
       <TaskList
         numberOfTodos={numberOfTodos}
-        numberOfConcludedTodos={numberOfConcludedTodos} 
+        numberOfConcludedTodos={completedTodos} 
         showMsg={MsgVisibility}
       />
         {todos.map(todo => {
@@ -68,7 +77,6 @@ export default function App() {
             <Todo
               key={todo.id} 
               content={todo.content}
-              isComplete={todo.isComplete}
               onDelete={() => handleDeleteTodo(todo.id)}
               onChangeState={() => handleChangeStateOfTodo(todo.id)}
             />

@@ -2,15 +2,18 @@ import styles from './Todo.module.css';
 
 import * as Icon from "@phosphor-icons/react";
 
-export function Todo({ content, onDelete, onChangeState }){
+export function Todo({ key, content, onDelete, onChangeState }){
     
-     // console.log(content);
+     const handlerChangeState = () => {
+          onChangeState(key);
+     };
 
      return (
           <main>
                <div className={styles.todo}>
                     <div>
-                         <input type="checkbox" onClick={onChangeState}></input>
+                         <input type="checkbox" onClick={handlerChangeState}>
+                         </input>
                          <label>{content}</label>
                     </div>
                     <button onClick={onDelete} title="Deletar todo">

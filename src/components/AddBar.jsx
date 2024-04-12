@@ -11,7 +11,7 @@ export function AddBar({ onAddTodo }) {
      return(
           <form className={styles.addbar}>
                <textarea
-                    name="todo"
+                    name='todo'
                     placeholder='Adicione uma nova tarefa'
                     required
                />
