@@ -24,11 +24,12 @@ export default function App() {
     }
   ]);
   
-  
   const [MsgVisibility, setMsgVisibility] = useState();
 
   const numberOfTodos = todos.length;
 
+  const numberOfConcludedTodos = 0;
+  
   const handleDeleteTodo = (id) => {
     const updatedTodos = todos.filter(todo => todo.id !== id);
     setTodos(updatedTodos);
@@ -46,11 +47,10 @@ export default function App() {
     setTodos(updatedTodos);
   }
   
-  console.log(todos);
-
-  // const handleConcludedTodo = () => {
-
-  // }
+  const handleChangeStateOfTodo = (id) => {
+    todo.isComplete = true;
+    numberOfConcludedTodos += 1;
+  }
 
   return (
     <article className={styles.app}>
@@ -59,7 +59,8 @@ export default function App() {
         onAddTodo = {handleCreateNewTodo}
       />
       <TaskList
-        numberOfTodos={numberOfTodos} 
+        numberOfTodos={numberOfTodos}
+        numberOfConcludedTodos={numberOfConcludedTodos} 
         showMsg={MsgVisibility}
       />
         {todos.map(todo => {
@@ -67,8 +68,9 @@ export default function App() {
             <Todo
               key={todo.id} 
               content={todo.content}
+              isComplete={todo.isComplete}
               onDelete={() => handleDeleteTodo(todo.id)}
-              onConcluded={() => handleConcludedTodo(todo.id)}
+              onChangeState={() => handleChangeStateOfTodo(todo.id)}
             />
           )
         })}
