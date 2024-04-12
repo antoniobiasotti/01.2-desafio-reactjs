@@ -27,11 +27,7 @@ export default function App() {
   
   const [MsgVisibility, setMsgVisibility] = useState();
 
-  // const [newTodoContent, setNewTodoContent] = useState('');
-
   const numberOfTodos = todos.length;
-
-  // console.log('Teste:' + numberOfTodos !== 0);
 
   const handleDeleteTodo = (id) => {
     const updatedTodos = todos.filter(todo => todo.id !== id);
@@ -60,7 +56,6 @@ export default function App() {
     <article className={styles.app}>
       <Header />
       <AddBar 
-        newTodoContent = {todos.content}
         onAddTodo = {handleCreateNewTodo}
       />
       <TaskList
