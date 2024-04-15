@@ -26,7 +26,7 @@ export default function App() {
 
   const [completedTodos, setNumberOfCompletedTodos] = useState(0);
   
-  const [MsgVisibility, setMsgVisibility] = useState(true);
+  const [MsgVisibility, setMsgVisibility] = useState();
   
   const numberOfTodos = todos.length;
   
@@ -49,13 +49,6 @@ export default function App() {
   }
 
   console.log(todos);
-
-  /* 2 Issues:
-    Ao remover um todo e adicionar um novo, a geração do novo Id está conflitando com o já existente e isso causa o funcionamento errado de outras funcionalidades, como deletar todos
-
-    O conteúdo dos todos a serem criados está sendo passado como undefined  
-
-  */
   
   const handleChangeStateOfTodo = (todoId) => {
     const updatedTodos = todos.map(todo => {
