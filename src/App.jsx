@@ -26,14 +26,14 @@ export default function App() {
 
   const [completedTodos, setNumberOfCompletedTodos] = useState(0);
   
-  const [MsgVisibility, setMsgVisibility] = useState();
+  const [MsgVisibility, setMsgVisibility] = useState(true);
   
   const numberOfTodos = todos.length;
   
   const handleDeleteTodo = (id) => {
     const updatedTodos = todos.filter(todo => todo.id !== id);
     setTodos(updatedTodos);
-    updatedTodos === 0 ? setMsgVisibility(true) : setMsgVisibility(false)
+    updatedTodos.length === 0 ? setMsgVisibility(true) : setMsgVisibility(false)
   };
   
   const handleCreateNewTodo = (content) => {
@@ -45,6 +45,7 @@ export default function App() {
     }
     const updatedTodos = [...todos, newTodo];
     setTodos(updatedTodos);
+    updatedTodos.length === 0 ? setMsgVisibility(true) : setMsgVisibility(false)
   }
   
   const handleChangeStateOfTodo = (todoId) => {
