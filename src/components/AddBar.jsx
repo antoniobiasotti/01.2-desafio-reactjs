@@ -5,14 +5,15 @@ export function AddBar({ onAddTodo }) {
      
      const handleButtonClick = (event) => {
           event.preventDefault();
-          onAddTodo();
+          onAddTodo(newTodoContent);
      };
 
      return(
           <form className={styles.addbar}>
                <textarea
-                    name='todo'
-                    placeholder='Adicione uma nova tarefa'
+                    name="todo"
+                    placeholder="Adicione uma nova tarefa"
+                    value={newTodoContent}
                     required
                />
                <button onClick={handleButtonClick}>
