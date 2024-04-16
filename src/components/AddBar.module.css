@@ -23,6 +23,10 @@
      overflow: hidden;
 }
 
+.add textarea:focus {
+     color: var(--gray-100);    
+}
+
 .addbar button {
      background: var(--blue-dark);
      color: var(--gray-100);
