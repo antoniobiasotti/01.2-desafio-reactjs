@@ -23,7 +23,7 @@ export function AddBar({ onAddTodo }) {
                />
                <button onClick={handleButtonClick}>
                     Criar 
-                    <Icon.PlusCircle size={16} />
+                    <Icon.PlusCircle size={16} weight="bold"/>
                </button>
           </form>
      )

@@ -26,6 +26,7 @@
 .addbar button {
      background: var(--blue-dark);
      color: var(--gray-100);
+     font-weight: bold;
 
      width: 90px;
      height: 52px;
