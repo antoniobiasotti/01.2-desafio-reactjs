@@ -5,8 +5,7 @@ export function Header() {
      return (
           <div>
                <header className={styles.header}>
-                    <img src={todoLogo} alt='logo' />
-                    {/* <Icon.Rocket size={46} color="#74F3FC" weight="thin" /> */}
+                    <img src={todoLogo} alt='logo' width={28}/>
                     to
                     <p style={{ color: 'var(--purple'}}>do</p>
                </header>

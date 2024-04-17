@@ -5,7 +5,10 @@
      background: var(--gray-700);
 
      display: flex;
-     justify-content: center;
-     
+     justify-content: center;     
      padding: 1.25rem 0rem;
+}
+
+.header img {
+     margin-right: 20px;
 }
