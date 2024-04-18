@@ -17,7 +17,9 @@ export function Todo({ key, content, onDelete, onChangeState }){
                          <label>{content}</label>
                     </div>
                     <button onClick={onDelete} title="Deletar todo">
-                         <Icon.Trash size={24} color="#808080" />
+                         <div>
+                              <Icon.Trash size={24} />
+                         </div>
                     </button>
                </div>
           </main>
