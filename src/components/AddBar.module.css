@@ -7,7 +7,7 @@
      /* background: var(--gray-400) */
 }
 
-.addbar textarea {
+.addbar input {
      color: var(--gray-100);
      background: var(--gray-500);
       
@@ -23,7 +23,7 @@
      overflow: hidden;
 }
 
-.add textarea:focus {
+.addbar input:focus {
      color: var(--gray-100);    
 }
 

@@ -14,12 +14,12 @@ export function AddBar({ onAddTodo }) {
 
      return(
           <form className={styles.addbar}>
-               <textarea
+               <input
                     name="todo"
                     placeholder="Adicione uma nova tarefa"
-                    required
                     onChange={(e) => setTodoContent(e.target.value)}
                     value={todoContent}
+                    required
                />
                <button onClick={handleButtonClick}>
                     Criar 
