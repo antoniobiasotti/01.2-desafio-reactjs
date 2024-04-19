@@ -13,7 +13,7 @@ export function AddBar({ onAddTodo }) {
      };
 
      return(
-          <form className={styles.addbar}>
+          <form className={styles.addbar} onSubmit={handleButtonClick}>
                <input
                     name="todo"
                     placeholder="Adicione uma nova tarefa"
@@ -21,7 +21,7 @@ export function AddBar({ onAddTodo }) {
                     value={todoContent}
                     required
                />
-               <button onClick={handleButtonClick}>
+               <button type="submit">
                     Criar 
                     <Icon.PlusCircle size={16} weight="bold"/>
                </button>
