@@ -3,14 +3,14 @@
     background: var(--gray-700);
 
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
+    
+    width: 100%;
      
     padding: 1.25rem 0rem;
-    margin-top: 10%;
-    position: fixed;
     bottom: 0;
-    width: 100%;
 }
 
 .Footer p {
