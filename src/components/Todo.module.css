@@ -63,11 +63,15 @@ main {
     height: 24;
 }
 
+.todo button div {
+   color: var(--gray-300);
+   padding: 6px;
+}
+
 .todo button div:hover {
    background: var(--gray-400);
    color: var(--danger);
    transition: color 0.1s;
-   padding: 2px;
    border-radius: 4px;
 }
 
