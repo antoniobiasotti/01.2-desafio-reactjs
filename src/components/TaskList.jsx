@@ -11,7 +11,7 @@ export function TaskList({ showMsg, numberOfTodos, numberOfConcludedTodos }) {
                <header>
                     <div className={styles.tasklist}>
                          <h4 className={styles.tarefasCriadas}>Tarefas criadas<button>{numberOfTodos}</button></h4>
-                         <h4 className={styles.tarefasConcluidas}>Concluídas<button>{numberOfConcludedTodos}</button></h4>
+                         <h4 className={styles.tarefasConcluidas}>Concluídas<button>{numberOfConcludedTodos} de {numberOfTodos}</button></h4>
                     </div>
                </header>
                <div className={styles.content}>
