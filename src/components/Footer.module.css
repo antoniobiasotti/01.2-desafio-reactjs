@@ -24,6 +24,7 @@
 
 .Footer a:visited {
     text-decoration: none;
+    color: var(--purple);
 }
 
 .Footer a:hover {
