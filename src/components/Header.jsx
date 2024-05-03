@@ -5,9 +5,7 @@ export function Header() {
      return (
           <div>
                <header className={styles.header}>
-                    <img src={todoLogo} alt='logo' width={28}/>
-                    to
-                    <p style={{ color: 'var(--purple'}}>do</p>
+                    <img src="/logo.svg" alt="logo da aplicação" />
                </header>
           </div>
      )
