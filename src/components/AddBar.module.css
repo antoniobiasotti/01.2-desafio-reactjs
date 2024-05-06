@@ -19,12 +19,11 @@
      border-radius: 8px;
 
      resize: none;
-     outline: none;
      overflow: hidden;
 }
 
-.addbar input:focus {
-     color: var(--gray-100);    
+.container:focus {
+     border-color: var(--purple-dark);    
 }
 
 .addbar button {

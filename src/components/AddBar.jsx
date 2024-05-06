@@ -15,6 +15,7 @@ export function AddBar({ onAddTodo }) {
      return(
           <form className={styles.addbar} onSubmit={handleButtonClick}>
                <input
+                    className={styles.container}
                     name="todo"
                     placeholder="Adicione uma nova tarefa"
                     onChange={(e) => setTodoContent(e.target.value)}
