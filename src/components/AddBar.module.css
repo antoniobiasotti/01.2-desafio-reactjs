@@ -14,7 +14,7 @@
      width: 638px;
      height: 54px;
 
-     border: 0;
+     border: 1px solid var(--gray-700);
      padding: 1.2rem 1.5rem;
      border-radius: 8px;
 
@@ -25,6 +25,10 @@
 .container:focus {
      border-color: var(--purple-dark);    
 }
+
+.container::placeholder {
+     color: var(--gray-300)
+   }
 
 .addbar button {
      background: var(--blue-dark);
